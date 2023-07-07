@@ -1,0 +1,3 @@
+/home/oliver/myProjects/X11SimpleGame/build/CMakeFiles/rebuild_cache.dir
+/home/oliver/myProjects/X11SimpleGame/build/CMakeFiles/edit_cache.dir
+/home/oliver/myProjects/X11SimpleGame/build/CMakeFiles/x11game.dir
