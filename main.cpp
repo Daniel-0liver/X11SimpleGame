@@ -1,15 +1,21 @@
-#include <X11/Xlib.h>
-#include <cstdio>
-#include <iostream>
+#include "X11SimpleGame.hpp"
 
 int main()
 {
-	Display *d = XOpenDisplay(NULL);
-	if (d == NULL)
+	StartWindow *s;
+	XEvent	e;
+
+	StartWindow(1, 1, 800, 600, 1, 0xffffff, 0x2e2066);
+	XSelectInput(s->display, s->window, KeyPressMask);
+	XMapWindow(s->display, s->window);
+	while (true)
 	{
-		printf("Unable to open display\n");
-		return -1;
+		XNextEvent(s->display, &e);
+		if (e.xkey.keycode == KEY_ESCAPE)
+			break ;
+		else
+			std::cout << "Key Pressed : " << e.xkey.keycode << std::endl;
 	}
-	std::cout << "Hello World\n";
+	XCloseDisplay(s->display);
 	return 0;
 }

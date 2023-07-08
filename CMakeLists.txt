@@ -1,9 +1,29 @@
 cmake_minimum_required(VERSION 3.10)
-project(x11game-project)
+project(X11SimpleGame-project)
 
-find_package(X11)
+# Configuração do projeto
+set(SOURCES
+    main.cpp
+	X11SimpleGame.hpp
+)
 
-add_executable(x11game main.cpp)
+# Configuração das dependências
+find_package(X11 REQUIRED)
 
-target_link_libraries(x11game
-	${X11_LIBRARIES})
+# Adição dos arquivos-fonte e criação do executável
+add_executable(X11SimpleGame ${SOURCES})
+
+# Inclusão de diretórios de cabeçalhos
+target_include_directories(X11SimpleGame PRIVATE
+    ${X11_INCLUDE_DIR}
+)
+
+# Definição de recursos de linguagem
+target_compile_features(X11SimpleGame PRIVATE
+    cxx_std_11
+)
+
+# Vinculação de bibliotecas
+target_link_libraries(X11SimpleGame PRIVATE
+    ${X11_LIBRARIES}
+)

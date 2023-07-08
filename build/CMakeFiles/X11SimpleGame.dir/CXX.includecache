@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/oliver/myProjects/X11SimpleGame/X11SimpleGame.hpp
+X11/Xlib.h
+-
+cstdio
+-
+iostream
+-
+
+/home/oliver/myProjects/X11SimpleGame/main.cpp
+X11SimpleGame.hpp
+/home/oliver/myProjects/X11SimpleGame/X11SimpleGame.hpp
+

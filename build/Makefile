@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named x11game
+# Target rules for targets named X11SimpleGame
 
 # Build rule for target.
-x11game: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 x11game
-.PHONY : x11game
+X11SimpleGame: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 X11SimpleGame
+.PHONY : X11SimpleGame
 
 # fast build rule for target.
-x11game/fast:
-	$(MAKE) -f CMakeFiles/x11game.dir/build.make CMakeFiles/x11game.dir/build
-.PHONY : x11game/fast
+X11SimpleGame/fast:
+	$(MAKE) -f CMakeFiles/X11SimpleGame.dir/build.make CMakeFiles/X11SimpleGame.dir/build
+.PHONY : X11SimpleGame/fast
 
 main.o: main.cpp.o
 
@@ -129,7 +129,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/x11game.dir/build.make CMakeFiles/x11game.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/X11SimpleGame.dir/build.make CMakeFiles/X11SimpleGame.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -138,7 +138,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/x11game.dir/build.make CMakeFiles/x11game.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/X11SimpleGame.dir/build.make CMakeFiles/X11SimpleGame.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -147,7 +147,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/x11game.dir/build.make CMakeFiles/x11game.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/X11SimpleGame.dir/build.make CMakeFiles/X11SimpleGame.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -158,7 +158,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... x11game"
+	@echo "... X11SimpleGame"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
